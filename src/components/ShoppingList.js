@@ -1,16 +1,15 @@
 import "../styles/ShoppingList.css";
 import { plantList } from "../datas/plantList";
+import PlantItem from "./PlantItem";
 
 function ShoppingList() {
-  const plantListPerId = plantList.reduce((accumulator, currentPlant) => {
-    // Destructurer pour récuperer l'id d'un côté et un objet avec les autres propriétés de l'autre
-    const { id, ...otherProps } = currentPlant
-    
-    accumulator[currentPlant.id] = otherProps
-    return accumulator
-  }, {})
-  console.log(plantListPerId);
-  console.log(plantList);
+  // const plantListPerId = plantList.reduce((accumulator, currentPlant) => {
+  //   // Destructurer pour récuperer l'id d'un côté et un objet avec les autres propriétés de l'autre
+  //   const { id, ...otherProps } = currentPlant
+
+  //   accumulator[currentPlant.id] = otherProps
+  //   return accumulator
+  // }, {})
 
   const categories = plantList.reduce((accumulator, currentPlant) => {
     // return accumulator.includes(currentPlant.category) ? accumulator : accumulator.concat(currentPlant.category)
@@ -26,7 +25,7 @@ function ShoppingList() {
       {/* POURQUOI JE PEUX PAS MAP L'OBJET plantListPerId ? */}
       {/* <ul>
       {plantListPerId.map((plant) => (
-        <li>{plant.name}</li>
+        <li>{"test"}</li>
       ))}
       </ul> */}
       <ul>
@@ -36,13 +35,16 @@ function ShoppingList() {
       </ul>
       <ul className="lmj-plant-list">
         {plantList.map((plant) => (
-          <li key={plant.id} className="lmj-plant-item">
-            {plant.name}
-            {/* {plant.isBestSale ? <span>🔥</span> : null} */}
-            {/* Précise que l'élément ne sera généré que si la condition est respectée */}
-            {plant.isBestSale && <span>🔥</span>}
-            {plant.isSpecialOffer && <div className="lmj-sales">Soldes</div>}
-          </li>
+          <PlantItem
+            key={plant.id} // On peut pas faire autrement ?
+            name={plant.name}
+            cover={plant.cover}
+            id={plant.id}
+            light={plant.light}
+            water={plant.water}
+            bestSale={plant.isBestSale}
+            specialOffer={plant.isSpecialOffer}
+          />
         ))}
       </ul>
     </div>
