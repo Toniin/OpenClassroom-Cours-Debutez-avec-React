@@ -1,7 +1,13 @@
+.lmj-plant-categories {
+	display: flex;
+	list-style-type: none;
+	justify-content: space-around;
+}
+
 .lmj-plant-list {
 	list-style-type: none;
 	padding: 32px;
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 800px;
+	justify-content: center;
 }

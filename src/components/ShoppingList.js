@@ -21,14 +21,14 @@ function ShoppingList() {
   }, []);
 
   return (
-    <div>
+    <div className='lmj-shopping-list'>
       {/* POURQUOI JE PEUX PAS MAP L'OBJET plantListPerId ? */}
       {/* <ul>
       {plantListPerId.map((plant) => (
         <li>{"test"}</li>
       ))}
       </ul> */}
-      <ul>
+      <ul className="lmj-plant-categories">
         {categories.map((category) => (
           <li key={category}>{category}</li>
         ))}

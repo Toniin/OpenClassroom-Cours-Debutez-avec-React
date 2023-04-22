@@ -1,17 +1,30 @@
 .lmj-plant-item-cover {
-	height: 220px;
-	width: 220px;
+	position: relative;
+}
+
+.lmj-plant-item-cover img{
+	height: 250px;
+	width: 250px;
 	border-radius: 20px;
+	object-fit: cover;
 }
 
 .lmj-plant-item {
-	margin: 10px;
-  position: relative;
 	display: flex;
+	flex-direction: column;
 	align-items: flex-start;
 	justify-content: center;
-	flex-direction: column;
+	flex-grow: 1;
 	text-transform: capitalize;
+	margin: 10px;
+}
+
+.lmj-plant-item-text {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-left: 20px;
 }
 
 .lmj-best {
