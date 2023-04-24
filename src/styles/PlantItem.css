@@ -24,7 +24,16 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	padding-left: 20px;
+}
+
+.lmj-plant-item-text > p > span {
+	font-weight: bold;
+}
+
+.lmj-plant-item-text > div {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
 }
 
 .lmj-best {

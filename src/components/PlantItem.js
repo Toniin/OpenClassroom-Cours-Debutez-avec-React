@@ -2,14 +2,10 @@ import "../styles/PlantItem.css";
 import CareScale from "./CareScale";
 
 function PlantItem(props) {
-  const { name, cover, id, light, water, bestSale, specialOffer } = props;
-
-  function handleClick(plantName) {
-    console.log(`Vous voulez acheter 1 ${plantName}? Très bon choix 🌱✨`);
-  }
+  const { name, price, cover, light, water, bestSale, specialOffer } = props;
 
   return (
-    <li key={id} className="lmj-plant-item" onClick={() => handleClick(name)}>
+    <li className="lmj-plant-item">
       <div className="lmj-plant-item-cover">
         <img
           src={cover}
@@ -19,9 +15,11 @@ function PlantItem(props) {
         {bestSale && <span className="lmj-best">Best 🔥</span>}
       </div>
       <div className="lmj-plant-item-text">
-        <p>{name}</p>
+        <p>{name} - <span>{price}€</span></p>
+        <div>
         <CareScale careType="water" scaleValue={water} />
         <CareScale careType="light" scaleValue={light} />
+        </div>
       </div>
     </li>
   );

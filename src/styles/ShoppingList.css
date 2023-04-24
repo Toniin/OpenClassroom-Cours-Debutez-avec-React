@@ -1,13 +1,17 @@
-.lmj-plant-categories {
-	display: flex;
-	list-style-type: none;
-	justify-content: space-around;
+.lmj-shopping-list {
+	width: 100%;
 }
 
 .lmj-plant-list {
 	list-style-type: none;
-	padding: 32px;
+	padding: 32px 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	/* align-items: center; */
+}
+
+.lmj-plant-list > div {
+	display: flex;
+	flex-direction: column;
 }
