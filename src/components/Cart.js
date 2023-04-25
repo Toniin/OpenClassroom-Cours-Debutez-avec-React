@@ -11,7 +11,6 @@ function Cart({ cart, updateCart }) {
   // const isOpen = isOpenState[0]; => VALEUR ACTUELLE
   // const updateIsOpen = isOpenState[1]; => FONCTION QUI PERMET DE MODIFIER isOpen
 
-  const testGit = test
   // useState = [
   //  VALEUR ACTUELLE,
   //  FONCTION QUI MODIFIE LA VALEUR ACTUELLE
